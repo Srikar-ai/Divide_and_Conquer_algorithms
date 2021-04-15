@@ -1,0 +1,21 @@
+def Partition(low,high,arr):
+    i=low-1
+    j=low
+    pivot=arr[high]
+    while j<high:
+        if arr[j]<=pivot:
+            i+=1
+            arr[i],arr[j]=arr[j],arr[i]
+        j+=1    
+    arr[i+1],arr[j]=arr[j],arr[i+1]
+    return i+1        
+def QuickSort(low,high,arr):
+    if len(arr)<=1:
+        return arr
+    if low<high:
+        pi=Partition(low, high, arr)
+        QuickSort(low, pi-1, arr)
+        QuickSort(pi+1, high, arr)    
+arr=[10,80,30,90,40,50,70]    
+QuickSort(0, 6,arr )
+print(arr)
