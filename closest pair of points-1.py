@@ -1,3 +1,4 @@
+#time complexity is O(n(logn)^2) not O(nlogn)
 def Distance(point1,point2):
     a=point1[0]-point2[0]
     b=point1[1]-point2[1]
@@ -36,4 +37,4 @@ def C(points):
     points_count=len(points_x)
     return (Recursive(points_x, points_y, points_count)   )
 points=[[-980,-403],[-578,910],[-568,-591],[47,244],[78,-198],[140,-800],[314,165],[646,-808],[889,-741],[980,-733]]
-print(C(points))  
+print(C(points)) 
